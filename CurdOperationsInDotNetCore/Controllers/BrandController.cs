@@ -18,6 +18,7 @@ namespace CurdOperationsInDotNetCore.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Brand>>> GetBrands()
         {
+            //check null value
             if(_dbContext.Brands == null)
             {
                 return NotFound();
